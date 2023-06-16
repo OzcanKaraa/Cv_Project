@@ -27,5 +27,39 @@ namespace Cv_Project.Controllers
             var egitimler = db.TblEgitimlerim.ToList();
             return PartialView(egitimler);
         }
+
+        public PartialViewResult Yeteneklerim()
+        {
+            var yetenekler = db.TblYeteneklerim.ToList();
+            return PartialView(yetenekler);
+        }
+
+
+        public PartialViewResult Hobilerim()
+        {
+            var hobiler = db.TblHobilerim.ToList();
+            return PartialView(hobiler);
+        }
+
+        public PartialViewResult Sertifikalarim()
+        {
+            var sertifikalar = db.TblSertifikalarim.ToList();
+            return PartialView(sertifikalar);
+        }
+
+        [HttpGet]
+        public PartialViewResult iletisim()
+        {
+            return PartialView();
+        }
+
+        [HttpPost]
+        public PartialViewResult iletisim(Tbliletisim t)
+        {
+            t.Tarih = DateTime.Parse(DateTime.Now.ToShortDateString());
+            db.Tbliletisim.Add(t);
+            db.SaveChanges();
+            return PartialView();
+        }
     }
 }
