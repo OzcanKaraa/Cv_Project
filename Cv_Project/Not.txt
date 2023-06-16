@@ -1,0 +1,3 @@
+@using Cv_Project.Models.Entity
+
+@model List<TblDeneyimlerim>
