@@ -7,3 +7,6 @@
 
          @x.Yetenek
          @item.Yetenek
+
+
+         @RenderBody()
