@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Web;
 using Cv_Project.Models.Entity;
 
@@ -35,6 +36,11 @@ namespace Cv_Project.Repositories
         public T TGet(int id)
         {
             return db.Set<T>().Find(id);
+        }
+
+        public T Find(Expression<Func<T,bool>> where )
+        {
+            return db.Set<T>().FirstOrDefault(where);
         }
     }
 }
