@@ -6,8 +6,7 @@ using System.Web;
 
 namespace Cv_Project.Repositories
 {
-    public class DeneyimRepository:GenericRepository<TblDeneyimlerim>
+    public class EgitimRepository : GenericRepository<TblEgitimlerim>
     {
-       
     }
 }
