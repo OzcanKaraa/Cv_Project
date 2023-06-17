@@ -14,7 +14,7 @@ namespace Cv_Project.Controllers
         public ActionResult Index()
         {
             var degerler = repo.List();
-            return View();
+            return View(degerler);
         }
     }
 }
