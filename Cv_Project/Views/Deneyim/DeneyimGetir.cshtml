@@ -1,4 +1,5 @@
-﻿
+﻿@model Cv_Project.Models.Entity.TblDeneyimlerim
+
 @{
     ViewBag.Title = "DeneyimGetir";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -9,11 +10,21 @@
 <br />
 <form>
 
-    <input type="text" name="ID" class="form-control" placeholder="Id" /><br />
-    <input type="text" name="Baslik" class="form-control" placeholder="Başlığı yazınız" /><br />
-    <input type="text" name="AltBaslik" class="form-control" placeholder="Alt Başlık" /><br />
-    <input type="text" name="Tarih" class="form-control" placeholder="Çalışma Tarihi" /><br />
-    <textarea placeholder="Açıklamanızı giriniz" name="Aciklama" class="form-control" rows="5"></textarea><br />
+    @Html.Label("Deneyim ID")
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+    <br />
+    @Html.Label("Başlık")
+    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+    <br />
+    @Html.Label("Alt Başlık")
+    @Html.TextBoxFor(x => x.AltBaslik, new { @class = "form-control" })
+    <br />
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+    <br />
+    @Html.Label("Açıklama")
+    @Html.TextAreaFor(x => x.Aciklama, new { @class = "form-control" })
+    <br />
     <button class="btn btn-info">Güncelle</button>
 
 </form>
