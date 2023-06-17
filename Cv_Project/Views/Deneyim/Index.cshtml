@@ -1,5 +1,7 @@
 ﻿@using Cv_Project.Models.Entity
 @model List<TblDeneyimlerim>
+
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -11,12 +13,17 @@
 <table>
     <tr>
         <th>ID</th>
+        <th>Başlık</th>
+        <th>Alt Başlık</th>
     </tr>
 
     @foreach (var item in Model)
     {
         <tr>
             <td>@item.ID</td>
+            <td>@item.Baslik</td>
+            <td>@item.AltBaslik</td>
         </tr>
     }
+
 </table>
