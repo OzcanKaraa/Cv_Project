@@ -1,0 +1,22 @@
+﻿@using Cv_Project.Models.Entity
+@model List<TblDeneyimlerim>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Deneyim Listesi</h2>
+
+<table>
+    <tr>
+        <th>ID</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ID</td>
+        </tr>
+    }
+</table>
