@@ -25,13 +25,13 @@ namespace Cv_Project.Models.Entity
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<TblAdmin> TblAdmin { get; set; }
-        public virtual DbSet<TblDeneyimlerim> TblDeneyimlerim { get; set; }
-        public virtual DbSet<TblEgitimlerim> TblEgitimlerim { get; set; }
-        public virtual DbSet<TblHakkimda> TblHakkimda { get; set; }
-        public virtual DbSet<TblHobilerim> TblHobilerim { get; set; }
-        public virtual DbSet<Tbliletisim> Tbliletisim { get; set; }
-        public virtual DbSet<TblSertifikalarim> TblSertifikalarim { get; set; }
-        public virtual DbSet<TblYeteneklerim> TblYeteneklerim { get; set; }
+        public virtual DbSet<TblAdmin> TblAdmins { get; set; }
+        public virtual DbSet<TblDeneyimlerim> TblDeneyimlerims { get; set; }
+        public virtual DbSet<TblEgitimlerim> TblEgitimlerims { get; set; }
+        public virtual DbSet<TblHakkimda> TblHakkimdas { get; set; }
+        public virtual DbSet<TblHobilerim> TblHobilerims { get; set; }
+        public virtual DbSet<Tbliletisim> Tbliletisims { get; set; }
+        public virtual DbSet<TblSertifikalarim> TblSertifikalarims { get; set; }
+        public virtual DbSet<TblYeteneklerim> TblYeteneklerims { get; set; }
     }
 }
