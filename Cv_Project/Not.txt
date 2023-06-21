@@ -4,14 +4,10 @@
 @foreach (var x in Model)
         {}
 
-
          @x.Yetenek
+
          @item.Yetenek
 
-
          @RenderBody(
-         
-         
-         
          @using Cv_Project.Models.Entity
 @model List<TblDeneyimlerim>)
