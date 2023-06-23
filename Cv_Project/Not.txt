@@ -11,3 +11,29 @@
          @RenderBody(
          @using Cv_Project.Models.Entity
 @model List<TblDeneyimlerim>)
+
+@{ string renk = "";}
+@{ string labelrenk = "";}
+
+ @foreach (var item in Model)
+                                        {
+                                            if (item.Oran >= 0 && item.Oran <= 50)
+                                            {
+                                                renk = "progress-bar bg-danger";
+                                                labelrenk = "badge bg-danger";
+                                            }
+                                            if (item.Oran >= 51 && item.Oran <= 70)
+                                            {
+                                                renk = "progress-bar bg-warning";
+                                                labelrenk = "badge bg-warning";
+                                            }
+                                            if (item.Oran >= 71 && item.Oran <= 84)
+                                            {
+                                                renk = "progress-bar bg-primary";
+                                                labelrenk = "badge bg-primary";
+                                            }
+                                            if (item.Oran >= 85 && item.Oran <= 100)
+                                            {
+                                                renk = "progress-bar bg-success";
+                                                labelrenk = "badge bg-success";
+                                            }
