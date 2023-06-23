@@ -33,7 +33,5 @@ namespace Cv_Project.Models.Entity
         public virtual DbSet<Tbliletisim> Tbliletisims { get; set; }
         public virtual DbSet<TblSertifikalarim> TblSertifikalarims { get; set; }
         public virtual DbSet<TblYeteneklerim> TblYeteneklerims { get; set; }
-        public object TblYeteneklerim { get; internal set; }
-        public object Tbliletisim { get; internal set; }
     }
 }
