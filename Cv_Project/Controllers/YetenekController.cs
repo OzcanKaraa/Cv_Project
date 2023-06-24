@@ -16,5 +16,18 @@ namespace Cv_Project.Controllers
             var yetenekler = repo.List();
             return View(yetenekler);
         }
+
+        [HttpGet]
+        public ActionResult YeniYetenek()
+        {  
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult YeniYetenek(TblYeteneklerim p)
+        {
+            repo.TAdd(p);
+            return RedirectToAction("Index");
+        }
     }
 }
