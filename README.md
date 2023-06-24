@@ -1,28 +1,8 @@
 <hr>
-<pre>                                                                         <h3> Cv_Project </pre></h1>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<pre>
   
+                                                                    Cv_Project
+
+</pre>
 <hr>
 
