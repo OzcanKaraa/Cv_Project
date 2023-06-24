@@ -41,13 +41,14 @@ namespace Cv_Project.Controllers
             repo.TDelete(egitim);
             return RedirectToAction("Index");
         }
-
+        [HttpGet]
         public ActionResult EgitimDuzenle(int id)
         {
             var egitim = repo.Find(x => x.ID == id);
             return View(egitim);
         }
 
+        [HttpPost]
         public ActionResult EgitimDuzenle(TblEgitimlerim t)
         {
             if (!ModelState.IsValid)
