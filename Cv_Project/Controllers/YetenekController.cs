@@ -29,5 +29,10 @@ namespace Cv_Project.Controllers
             repo.TAdd(p);
             return RedirectToAction("Index");
         }
+
+        public ActionResult YetenekSil(int id)
+        {
+
+        }
     }
 }
