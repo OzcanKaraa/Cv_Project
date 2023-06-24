@@ -17,5 +17,19 @@ namespace Cv_Project.Controllers
             var egitim = repo.List();
             return View(egitim);
         }
+
+
+        [HttpGet]
+        public ActionResult EgitimEkle()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult EgitimEkle(TblEgitimlerim p)
+        {
+            repo.TAdd(p);
+            return RedirectToAction("Index");
+        }
     }
 }
