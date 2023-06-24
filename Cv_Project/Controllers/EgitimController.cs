@@ -50,13 +50,18 @@ namespace Cv_Project.Controllers
 
         public ActionResult EgitimDuzenle(TblEgitimlerim t)
         {
+            if (!ModelState.IsValid)
+            {
+                return View("EgitimDuzenle");
+            }
             var egitim = repo.Find(x => x.ID == t.ID);
             egitim.Baslik=t.Baslik;
             egitim.AltBaslik1 = t.AltBaslik1;
             egitim.AltBaslik2 = t.AltBaslik2;   
             egitim.Tarih=t.Tarih;
             egitim.GNO=t.GNO;
-            return View(egitim);
+            repo.TUpdate(egitim);
+            return RedirectToAction("Index");
         }
 
 
