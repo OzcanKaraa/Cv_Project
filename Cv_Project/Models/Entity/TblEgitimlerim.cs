@@ -20,6 +20,7 @@ namespace Cv_Project.Models.Entity
         public string Baslik { get; set; }
         public string AltBaslik1 { get; set; }
         public string AltBaslik2 { get; set; }
+        [StringLength(10, ErrorMessage = "Bu alana en fazla 10 karakterlik veri girisi yapýnýz!")]
         public string GNO { get; set; }
         public string Tarih { get; set; }
     }
