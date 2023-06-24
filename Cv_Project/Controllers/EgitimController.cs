@@ -34,5 +34,31 @@ namespace Cv_Project.Controllers
             repo.TAdd(p);
             return RedirectToAction("Index");
         }
+
+        public ActionResult EgitimSil(int id )
+        {
+            var egitim = repo.Find(x=>x.ID == id);
+            repo.TDelete(egitim);
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult EgitimDuzenle(int id)
+        {
+            var egitim = repo.Find(x => x.ID == id);
+            return View(egitim);
+        }
+
+        public ActionResult EgitimDuzenle(TblEgitimlerim t)
+        {
+            var egitim = repo.Find(x => x.ID == t.ID);
+            egitim.Baslik=t.Baslik;
+            egitim.AltBaslik1 = t.AltBaslik1;
+            egitim.AltBaslik2 = t.AltBaslik2;   
+            egitim.Tarih=t.Tarih;
+            egitim.GNO=t.GNO;
+            return View(egitim);
+        }
+
+
     }
 }
