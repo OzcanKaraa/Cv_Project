@@ -16,7 +16,7 @@ namespace Cv_Project.Models.Entity
     public partial class TblEgitimlerim
     {
         public int ID { get; set; }
-        [Required]
+        [Required(ErrorMessage ="Bu alaný Boþ Geçemezsiniz!")]
         public string Baslik { get; set; }
         public string AltBaslik1 { get; set; }
         public string AltBaslik2 { get; set; }

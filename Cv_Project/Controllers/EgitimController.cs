@@ -18,7 +18,6 @@ namespace Cv_Project.Controllers
             return View(egitim);
         }
 
-
         [HttpGet]
         public ActionResult EgitimEkle()
         {
@@ -28,6 +27,10 @@ namespace Cv_Project.Controllers
         [HttpPost]
         public ActionResult EgitimEkle(TblEgitimlerim p)
         {
+            if (!ModelState.IsValid)
+            {
+                return View("EgitimEkle");  
+            }
             repo.TAdd(p);
             return RedirectToAction("Index");
         }
