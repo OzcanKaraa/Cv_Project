@@ -35,5 +35,19 @@ namespace Cv_Project.Controllers
             repo.TUpdate(sertifika);
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public ActionResult YeniSertifika()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public ActionResult YeniSertifika(TblSertifikalarim p)
+        {
+             repo.TAdd(p);
+            return RedirectToAction("Index");
+        }
     }
 }
