@@ -1,7 +1,7 @@
 @using Cv_Project.Models.Entity
 @model List<TblDeneyimlerim>
 
-@foreach (var x in Model)
+@foreach (var item in Model)
         {}
 
          @x.Yetenek
@@ -10,6 +10,7 @@
 
          @RenderBody(
          @using Cv_Project.Models.Entity
+
 @model List<TblDeneyimlerim>)
 
 @{ string renk = "";}

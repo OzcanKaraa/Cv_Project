@@ -3,15 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Cv_Project.Models.Entity;
+using Cv_Project.Repositories;
+
+
 
 namespace Cv_Project.Controllers
 {
     public class SertifikaController : Controller
     {
-        // GET: Sertifika
+        GenericRepository<TblSertifikalarim> repo = new GenericRepository<TblSertifikalarim>();
         public ActionResult Index()
         {
-            return View();
+            var sertifika = repo.List();
+            return View(sertifika);
+        }
+
+        [HttpGet]
+        public ActionResult SertifikaGetir(int id)
+        {
+            var sertifika = repo.Find(x=>x.ID == id);
+            return View(sertifika); 
+        }
+
+        [HttpPost]
+        public ActionResult SertifikaGetir(TblSertifikalarim t)
+        {
+            var sertifika = repo.Find(x => x.ID == t.ID);
+            sertifika.Aciklama = t.Aciklama;
+            sertifika.Tarih = t.Tarih;
+            repo.TUpdate(sertifika);
+            return RedirectToAction("Index");
         }
     }
 }
