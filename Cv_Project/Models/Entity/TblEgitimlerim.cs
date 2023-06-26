@@ -9,18 +9,15 @@
 
 namespace Cv_Project.Models.Entity
 {
-
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
+    
     public partial class TblEgitimlerim
     {
         public int ID { get; set; }
-        [Required(ErrorMessage ="Bu alaný Boþ Geçemezsiniz!")]
         public string Baslik { get; set; }
         public string AltBaslik1 { get; set; }
         public string AltBaslik2 { get; set; }
-        [StringLength(10, ErrorMessage = "Bu alana en fazla 10 karakterlik veri girisi yapýnýz!")]
         public string GNO { get; set; }
         public string Tarih { get; set; }
     }
