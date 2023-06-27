@@ -18,7 +18,7 @@ namespace Cv_Project.Controllers
         }
         public PartialViewResult SosyalMedya()
         {
-            var sosyalmedya = db.TblSosyalMedyas.ToList();
+            var sosyalmedya = db.TblSosyalMedyas.Where(x=>x.Durum==true).ToList();
             return PartialView(sosyalmedya);
         }
         public PartialViewResult Deneyim()

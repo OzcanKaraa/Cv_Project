@@ -30,5 +30,31 @@ namespace Cv_Project.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpGet]
+        public ActionResult SayfaGetir(int id)
+        {
+           var hesap =repo.Find(x=>x.ID == id); 
+            return View(hesap);
+        }
+
+        [HttpPost]
+        public ActionResult SayfaGetir(TblSosyalMedya p)
+        {
+            var hesap = repo.Find(x => x.ID == p.ID);
+            hesap.Ad = p.Ad;
+            hesap.Durum = true;  //Güncelle kısımda Durum aktif hale getirme.
+            hesap.Link = p.Link;
+            hesap.ikon = p.ikon;
+            repo.TUpdate(hesap);
+           return RedirectToAction("Index");
+        }
+
+        public ActionResult Sil(int id)
+        {
+            var hesap = repo.Find(x => x.ID == id);
+            hesap.Durum = false;
+            repo.TUpdate(hesap);
+            return RedirectToAction("Index");
+        }
     }
 }
