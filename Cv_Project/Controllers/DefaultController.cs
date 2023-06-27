@@ -16,7 +16,11 @@ namespace Cv_Project.Controllers
             var degerler = db.TblHakkimdas.ToList();
             return View(degerler);
         }
-
+        public PartialViewResult SosyalMedya()
+        {
+            var sosyalmedya = db.TblSosyalMedyas.ToList();
+            return PartialView(sosyalmedya);
+        }
         public PartialViewResult Deneyim()
         {
             var deneyimler = db.TblDeneyimlerims.ToList();
