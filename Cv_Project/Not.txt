@@ -38,3 +38,18 @@
                                                 renk = "progress-bar bg-success";
                                                 labelrenk = "badge bg-success";
                                             }
+
+-----------------------------------------------------------------------------------------------------
+//Sosyal Medya Database olusumu
+
+Use DbCv
+
+Create Table TblSosyalMedya
+(
+ID Int Primary Key Identity (1,1),
+Ad Varchar(30),
+Link Varchar(50)
+
+)
+
+-----------------------------------------------------------------------------------------------------

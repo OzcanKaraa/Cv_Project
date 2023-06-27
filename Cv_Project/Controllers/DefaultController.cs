@@ -13,37 +13,37 @@ namespace Cv_Project.Controllers
         DbCvEntities db = new DbCvEntities();
         public ActionResult Index()
         {
-            var degerler = db.TblHakkimda.ToList();
+            var degerler = db.TblHakkimdas.ToList();
             return View(degerler);
         }
 
         public PartialViewResult Deneyim()
         {
-            var deneyimler = db.TblDeneyimlerim.ToList();
+            var deneyimler = db.TblDeneyimlerims.ToList();
             return PartialView(deneyimler);
         }
         public PartialViewResult Egitimlerim()
         {
-            var egitimler = db.TblEgitimlerim.ToList();
+            var egitimler = db.TblEgitimlerims.ToList();
             return PartialView(egitimler);
         }
 
         public PartialViewResult Yeteneklerim()
         {
-            var yetenekler = db.TblYeteneklerim.ToList();
+            var yetenekler = db.TblYeteneklerims.ToList();
             return PartialView(yetenekler);
         }
 
 
         public PartialViewResult Hobilerim()
         {
-            var hobiler = db.TblHobilerim.ToList();
+            var hobiler = db.TblHobilerims.ToList();
             return PartialView(hobiler);
         }
 
         public PartialViewResult Sertifikalarim()
         {
-            var sertifikalar = db.TblSertifikalarim.ToList();
+            var sertifikalar = db.TblSertifikalarims.ToList();
             return PartialView(sertifikalar);
         }
 
@@ -57,7 +57,7 @@ namespace Cv_Project.Controllers
         public PartialViewResult iletisim(Tbliletisim t)
         {
             t.Tarih = DateTime.Parse(DateTime.Now.ToShortDateString());
-            db.Tbliletisim.Add(t);
+            db.Tbliletisims.Add(t);
             db.SaveChanges();
             return PartialView();
         }
