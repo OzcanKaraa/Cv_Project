@@ -42,7 +42,7 @@ namespace Cv_Project.Controllers
         {
             var hesap = repo.Find(x => x.ID == p.ID);
             hesap.Ad = p.Ad;
-            hesap.Durum = true;  //Güncelle kısımda Durum aktif hale getirme.
+            hesap.Durum = true;  //Güncelle kısımda "Durum" aktif hale getirme.
             hesap.Link = p.Link;
             hesap.ikon = p.ikon;
             repo.TUpdate(hesap);

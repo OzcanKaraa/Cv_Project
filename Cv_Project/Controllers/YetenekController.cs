@@ -53,8 +53,5 @@ namespace Cv_Project.Controllers
             repo.TUpdate(y);
             return RedirectToAction("Index");
         }
-
-
-
     }
 }

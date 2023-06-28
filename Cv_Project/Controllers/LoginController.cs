@@ -6,7 +6,6 @@ using System.Web.Mvc;
 using System.Web.Security;
 using Cv_Project.Models.Entity;
 using Cv_Project.Repositories;
-using System.Web.Security;
 
 namespace Cv_Project.Controllers
 {
@@ -29,7 +28,6 @@ namespace Cv_Project.Controllers
             {
                 return RedirectToAction("Index", "Login");
             }
-           
         }
 
         [HttpPost]

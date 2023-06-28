@@ -12,7 +12,6 @@ namespace Cv_Project.Controllers
     public class EgitimController : Controller
     {
         GenericRepository<TblEgitimlerim> repo = new GenericRepository<TblEgitimlerim>();
-       
         public ActionResult Index()
         {
             var egitim = repo.List();
@@ -42,6 +41,7 @@ namespace Cv_Project.Controllers
             repo.TDelete(egitim);
             return RedirectToAction("Index");
         }
+
         [HttpGet]
         public ActionResult EgitimDuzenle(int id)
         {

@@ -35,7 +35,7 @@ namespace Cv_Project.Controllers
         {
             TblAdmin t = repo.Find(x => x.ID == id);
             repo.TDelete(t);
-            return RedirectToAction("Index"); //Index sayfasina yonlendirme
+            return RedirectToAction("Index"); //Index sayfasina yönlendirme
         }
 
         [HttpGet]
