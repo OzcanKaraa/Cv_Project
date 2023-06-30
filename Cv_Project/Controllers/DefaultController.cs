@@ -11,7 +11,6 @@ namespace Cv_Project.Controllers
     [AllowAnonymous]
     public class DefaultController : Controller
     {
-        // GET: Default
         DbCvEntities db = new DbCvEntities();
         public ActionResult Index()
         {
