@@ -2490,9 +2490,7 @@
     <Content Include="Views\Admin\AdminEkle.cshtml" />
     <Content Include="Views\Admin\AdminDuzenle.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
