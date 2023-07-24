@@ -2429,6 +2429,7 @@
     <Content Include="Login_Form\scss\bootstrap\_utilities.scss" />
     <Content Include="Login_Form\scss\bootstrap\_variables.scss" />
     <Content Include="Login_Form\scss\style.scss" />
+    <Content Include="DbCv.bak" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
