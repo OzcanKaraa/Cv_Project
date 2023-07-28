@@ -223,6 +223,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="AssemblyInitializeAttribute.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\DeneyimController.cs" />
@@ -293,6 +294,8 @@
     <Compile Include="SqlServerUnitTest1.cs">
       <SubType>Designer</SubType>
     </Compile>
+    <Compile Include="TestClassAttribute.cs" />
+    <Compile Include="TestContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminLTE-3.0.4\.gitignore" />
