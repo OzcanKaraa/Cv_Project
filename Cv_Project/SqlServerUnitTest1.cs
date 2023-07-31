@@ -51,15 +51,11 @@ namespace Cv_Project
             Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction SqlTest1_TestAction;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SqlServerUnitTest1));
             Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.InconclusiveCondition inconclusiveCondition1;
+            Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction SqlTest1_PosttestAction;
             this.SqlTest1Data = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestActions();
             SqlTest1_TestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
             inconclusiveCondition1 = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.InconclusiveCondition();
-            // 
-            // SqlTest1Data
-            // 
-            this.SqlTest1Data.PosttestAction = null;
-            this.SqlTest1Data.PretestAction = null;
-            this.SqlTest1Data.TestAction = SqlTest1_TestAction;
+            SqlTest1_PosttestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
             // 
             // SqlTest1_TestAction
             // 
@@ -70,6 +66,16 @@ namespace Cv_Project
             // 
             inconclusiveCondition1.Enabled = true;
             inconclusiveCondition1.Name = "inconclusiveCondition1";
+            // 
+            // SqlTest1Data
+            // 
+            this.SqlTest1Data.PosttestAction = SqlTest1_PosttestAction;
+            this.SqlTest1Data.PretestAction = null;
+            this.SqlTest1Data.TestAction = SqlTest1_TestAction;
+            // 
+            // SqlTest1_PosttestAction
+            // 
+            resources.ApplyResources(SqlTest1_PosttestAction, "SqlTest1_PosttestAction");
         }
 
         #endregion
